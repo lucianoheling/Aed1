@@ -1,0 +1,26 @@
+//LISTA C05 - EXERCICIO 8 -- Faca um programa que conte o numero de 1’s que aparecem em um string. 
+//Exemplo: “0011001” -> 3
+//o exercicio nao pede mas fiz uma função para contar, ele pede a string do usuario e entra na funcao.
+
+#include <stdio.h>
+
+void contarUns(char string[]){
+  int i, contar=0;
+  for(i = 0; i < sizeof(string); i++){
+    if(string[i]=='1'){
+      contar=++;
+    }
+  }
+  printf("Essa string possui %d 'uns'", contar);
+}
+
+int main(){
+  char string[7];  //se colocar o tamanho da string aqui, funciona.
+                   //porem, queria que fosse de acordo com o que o usuário digitasse, mas nao consegui
+
+  printf("Digite a string:\n");
+  scanf("%s", string);
+
+  contarUns(string);
+  // no final ainda conta um a menos, nao sei porque
+}
